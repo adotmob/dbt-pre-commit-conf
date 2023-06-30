@@ -1,0 +1,9 @@
+repos:
+  - repo: https://github.com/sqlfluff/sqlfluff
+    rev: 2.0.0a5
+    hooks:
+    - id: sqlfluff-lint
+      name: sqlfluff-lint
+      entry: sqlfluff lint --config dbt-pre-commit-conf/.sqlfluff models/
+      description: "Lints sql files with `SQLFluff`"
+      additional_dependencies : ['dbt-core==1.4.5', 'dbt-extractor==0.4.1', 'dbt-bigquery==1.4.3', 'dbt-trino==1.4.2', 'sqlfluff-templater-dbt==2.0.0a5']

@@ -1,0 +1,30 @@
+[sqlfluff]
+templater = dbt
+dialect = ansi
+exclude_rules = L016, L031,L034
+
+[sqlfluff:templater:dbt]
+project_dir = ..
+profiles_dir = ..
+
+[sqlfluff:rules:L010]
+capitalisation_policy = upper
+
+[sqlfluff:rules:L030]
+capitalisation_policy = upper
+
+[sqlfluff:rules:L040]
+# Null & Boolean Literals
+capitalisation_policy = upper
+
+[sqlfluff:rules:L057]
+# Special Characters in Identifiers
+additional_allowed_characters = ['_', '-']
+
+[sqlfluff:rules:L063]
+# Data Type Capitalization
+extended_capitalisation_policy = upper
+
+[sqlfluff:rules:L066]
+# Table Alias Lengths
+min_alias_length = 4
