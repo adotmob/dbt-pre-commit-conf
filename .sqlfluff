@@ -11,7 +11,7 @@ profiles_dir = ..
 capitalisation_policy = upper
 
 [sqlfluff:rules:L030]
-capitalisation_policy = upper
+extended_capitalisation_policy = upper
 
 [sqlfluff:rules:L040]
 # Null & Boolean Literals
